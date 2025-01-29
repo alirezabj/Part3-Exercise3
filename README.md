@@ -219,7 +219,7 @@ public class Exercise3 {
 
 The old code stored shape data in a generic Object[] array, which made the code messy and hard to maintain. We had to do a lot of casting ((Point) ps[i]) and used a big switch statement to figure out how to calculate area or boundaries.
 
-In the new approach, I created a Shape interface with the methods area() and boundaries(). Each shape (triangle, quadrilateral, circle) knows how to compute its own area and boundaries. This avoids big switch statements and manual casting.
+In the new approach, I created a Shape interface with the methods area() and boundaries(). Each shape (triangle, quadrilateral, circle) knows how to compute its own area and boundaries. This avoids big switch statements and manual casting. It also uses polymorphism: the main code can call shape.area() regardless of whether shape is a triangle, quadrilateral or circle. 
 
 **Benefit**: Each shape is now responsible for its own logic, and we can add more shapes by simply writing a new class that implements Shape. No need to edit the rest of the code.
 
@@ -232,7 +232,7 @@ public interface Shape {
 
 ##### readShape() Method
 
-The original code used repeated lines that read types, read points, then stored them into Object[].
+The original code used repeated lines that read types, read points, then stored them into Object[]. Addtionaly, reading input and constructing shapes was mixed with the rest of the logic.
 
 Now we only do these steps once in a dedicated method. We also don’t store points into an Object[] since we directly create a shape object of the right type. 
 
