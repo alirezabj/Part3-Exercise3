@@ -272,7 +272,7 @@ public class Exercise3 {
     public static class Quadrilateral implements Shape {
         private final Point p1, p2;
 
-        //store two points to define this quadrilateral’s bounding box
+        //store two points 
         public Quadrilateral(Point p1, Point p2) {
             this.p1 = p1;
             this.p2 = p2;
