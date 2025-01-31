@@ -232,7 +232,7 @@ public interface Shape {
 
 ##### readShape() Method
 
-The original code used repeated lines that read types, read points, then stored them into Object[]. Addtionaly, reading input and constructing shapes was mixed with the rest of the logic.
+The original code used repeated readTypes, readPoints and then stored them into Object[]. Addtionaly, reading input and constructing shapes was mixed with the rest of the logic.
 
 Now we only do these steps once in a dedicated method. We also don’t store points into an Object[] since we directly create a shape object of the right type. 
 
