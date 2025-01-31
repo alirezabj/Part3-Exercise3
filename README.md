@@ -275,7 +275,21 @@ public static class Triangle implements Shape {
 ```java
 public static class Quadrilateral implements Shape {
     private final Point p1, p2;
-    ...
+    
+    public Quadrilateral(Point p1, Point p2) {
+            this.p1 = p1;
+            this.p2 = p2;
+    }
+
+     @Override
+        public double area(){
+        ...
+    }
+
+     @Override
+        public Point[] boundaries(){
+        ...
+    }
 }
 ```
 1. store two points to define this quadrilateral’s bounding box
@@ -287,7 +301,22 @@ public static class Quadrilateral implements Shape {
 ```java
 public static class Circle implements Shape {
     private final Point center, perimeter;
-    ...
+
+    public Circle(Point center, Point perimeter) {
+            this.center = center;
+            this.perimeter = perimeter;
+    }
+
+
+    @Override
+    public double area(){
+        ...
+    }
+
+     @Override
+        public Point[] boundaries(){
+        ...
+    }
 }
 ```
 1. store a center and one perimeter point.
