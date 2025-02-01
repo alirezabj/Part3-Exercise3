@@ -336,7 +336,7 @@ public class Exercise3 {
     public static void main() throws Exception {
 
         // read two shapes
-        System.out.println("A circle is defined by a centre and a perimeter point others by corner points.");
+        System.out.println("A circle is defined by a centre and a perimeter point, the others by corner points");
         Shape s1 = readShape();
         Shape s2 = readShape();
 
@@ -351,7 +351,7 @@ public class Exercise3 {
         for (Shape sh : shapes) {
             totalArea += sh.area();
         }
-        System.out.printf("Sum of area covered by the shapes:\n%f\n\n", totalArea);
+        System.out.printf("Sum of area covered by the patterns:\n%f\n\n", totalArea);
 
         int xMax = Integer.MIN_VALUE;
         int yMax = Integer.MIN_VALUE;
