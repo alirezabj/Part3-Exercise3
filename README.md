@@ -7,7 +7,7 @@
 
 The old code stored shape data in a generic Object[] array, which made the code messy and hard to maintain. We had to do a lot of casting ((Point) ps[i]) and used a big switch statement to figure out how to calculate area or boundaries.
 
-In the new approach, I created a Shape interface with the methods area() and boundaries(). Each shape (triangle, quadrilateral, circle) knows how to compute its own area and boundaries. This avoids big switch statements and manual casting. It also uses polymorphism: the main code can call shape.area() regardless of whether shape is a triangle, quadrilateral or circle. 
+In the new approach, I created a Shape interface with the methods area() and boundaries(). Each shape (triangle, quadrilateral, circle) knows how to compute its own area and boundaries. This avoids big switch statements and manual casting.
 
 **Benefit**: Each shape is now responsible for its own logic, and we can add more shapes by simply writing a new class that implements Shape. No need to edit the rest of the code.
 
