@@ -126,16 +126,16 @@ public static void main() throws Exception {
     ...
 }
 ```
-We read two shapes from the user by calling readShape() twice. Moreover, this can easily be extended to N shapes if we want.
+We read two shapes from the user by calling readShape() twice. Moreover, this can easily be extended to N shapes if we want. In case the user typed an unknown shape, readShape() can return null, and we check this before adding to the list.
+
 
 ```java
 List<Shape> shapes = new ArrayList<>();
 if (s1 != null) shapes.add(s1);
 if (s2 != null) shapes.add(s2);
 ```
-In case the user typed an unknown shape, readShape() can return null, and we check this before adding to the list.
 
-
+Each shape calculates its own area and we just loop over them and add up the results.
 ```java
 double totalArea = 0.0;
 for (Shape sh : shapes) {
@@ -143,7 +143,6 @@ for (Shape sh : shapes) {
 }
 System.out.printf("Sum of area covered by the shapes:\n%f\n\n", totalArea);
 ```
-Each shape calculates its own area and we just loop over them and add up the results.
 
 ##### Combining Boundaries
 
